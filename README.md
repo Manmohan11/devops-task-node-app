@@ -30,15 +30,12 @@ task-node-app/
 
 ---
 
----
-
 # Prerequisites
 
 - Node.js (v14 or higher)
 - npm
 - MongoDB Atlas account or local MongoDB installation
 
----
 
 ---
 ## Installation
@@ -60,7 +57,7 @@ PORT=3000
 MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/taskdb
 ```
 Replace with your actual MongoDB connection string from MongoDB Atlas.
----
+
 
 ---
 ## Running the Server
@@ -75,12 +72,13 @@ Expected output:
 ✅ MongoDB connected
 🚀 Server running on port 3000
 ```
----
 
 ---
 ## API Endpoints
 
 ### Health Check
+
+Base URL: `http://localhost:3000
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -98,7 +96,6 @@ Base URL: `http://localhost:3000/api/tasks`
 | PUT | `/:id` | Update a task |
 | DELETE | `/:id` | Delete a task |
 
----
 
 ---
 ## Testing the API
@@ -169,14 +166,15 @@ curl -X DELETE http://localhost:3000/api/tasks/TASK_ID
   }
 ]
 ```
----
 
+---
 ## Validation Rules
 
 - **title**: Required, minimum 3 characters
 - **description**: Optional, defaults to empty string
 - **completed**: Optional boolean, defaults to false
 
+---
 ## Error Handling
 
 - **400**: Bad request (validation error or invalid ID)
@@ -208,9 +206,6 @@ MongoDB Database
 Response returned to client
 ```
 
----
-
----
 ### Flow of REST API under the hood
 
 ```
